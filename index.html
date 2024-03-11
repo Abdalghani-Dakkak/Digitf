@@ -1,564 +1,981 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Digitf</title>
-  <link rel="stylesheet" href="./assets/plugins/bootstrap-5.3.2-dist/css/bootstrap.css">
-  <link rel="stylesheet" href="./assets/plugins/fontawesome-free-6.4.2-web/css/all.min.css">
-  <link rel="stylesheet" href="./assets/css/digitf.css">
-</head>
-<body>
-  <nav class="navbar navbar-expand-lg p-3 position-fixed top-0 z-3 w-100" id="navbar">
-    <div class="container-fluid">
-      <a class="navbar-brand text-uppercase fs-4 fw-bold me-5 logo" href="index.html">Digitf</a>
-      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-uppercase">
-          <li class="nav-item ms-2 me-2">
-            <a class="nav-link navbar-links active" aria-current="page" href="index.html">Home</a>
-          </li>
-          <li class="nav-item ms-2 me-2">
-            <a class="nav-link navbar-links" href="#about">About</a>
-          </li>
-          <li class="nav-item ms-2 me-2">
-            <a class="nav-link navbar-links" href="#shop">Shop</a>
-          </li>
-          <li class="nav-item ms-2 me-2">
-            <a class="nav-link navbar-links" href="#furniture">Furniture</a>
-          </li>
-          <li class="nav-item ms-2 me-2">
-            <a class="nav-link navbar-links" href="#contact">contact us</a>
-          </li>
-        </ul>
-        <ul class="navbar-nav mb-2 mb-lg-0 align-items-lg-center">
-          <li class="nav-item ms-lg-3 me-lg-3">
-            <button onclick="Login()" class="btn text-uppercase text-light"><i class="fa-solid fa-user"></i> login</button>
-            <div id="loginComponant" class="alert position-fixed top-50 start-50 z-3 text-light text-center p-4 login-div d-none" role="alert">
-              <h2 class="mb-4 fs-1">Login</h2>
-              <form action="" method="post">
-                <input type="email" class="d-block bg-transparent border border-2 border-start-0 border-end-0 border-top-0 text-light p-2" placeholder="Email...">
-                <input type="password" class="d-block bg-transparent border border-2 border-start-0 border-end-0 border-top-0 text-light p-2" placeholder="Password...">
-                <button class="read-more-btn btn rounded-pill text-light ps-5 pe-5 mt-4 fs-5" type="submit">Sign in</button>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Digitf</title>
+    <link
+      rel="stylesheet"
+      href="./assets/plugins/bootstrap-5.3.2-dist/css/bootstrap.css"
+    />
+    <link
+      rel="stylesheet"
+      href="./assets/plugins/fontawesome-free-6.4.2-web/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./assets/css/digitf.css" />
+  </head>
+  <body>
+    <nav
+      class="navbar navbar-expand-lg p-3 position-fixed top-0 z-3 w-100"
+      id="navbar"
+    >
+      <div class="container-fluid">
+        <a
+          class="navbar-brand text-uppercase fs-4 fw-bold me-5 logo"
+          href="index.html"
+          >Digitf</a
+        >
+        <button
+          class="navbar-toggler border-0"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+          </span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-uppercase">
+            <li class="nav-item ms-2 me-2">
+              <a
+                class="nav-link navbar-links active"
+                aria-current="page"
+                href="index.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item ms-2 me-2">
+              <a class="nav-link navbar-links" href="#about">About</a>
+            </li>
+            <li class="nav-item ms-2 me-2">
+              <a class="nav-link navbar-links" href="#shop">Shop</a>
+            </li>
+            <li class="nav-item ms-2 me-2">
+              <a class="nav-link navbar-links" href="#furniture">Furniture</a>
+            </li>
+            <li class="nav-item ms-2 me-2">
+              <a class="nav-link navbar-links" href="#contact">contact us</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav mb-2 mb-lg-0 align-items-lg-center">
+            <li class="nav-item ms-lg-3 me-lg-3">
+              <button onclick="Login()" class="btn text-uppercase text-light">
+                <i class="fa-solid fa-user"></i> login
+              </button>
+              <div
+                id="loginComponant"
+                class="alert position-fixed top-50 start-50 z-3 text-light text-center p-4 login-div d-none"
+                role="alert"
+              >
+                <h2 class="mb-4 fs-1">Login</h2>
+                <form action="" method="post">
+                  <input
+                    type="email"
+                    class="d-block bg-transparent border border-2 border-start-0 border-end-0 border-top-0 text-light p-2"
+                    placeholder="Email..."
+                  />
+                  <input
+                    type="password"
+                    class="d-block bg-transparent border border-2 border-start-0 border-end-0 border-top-0 text-light p-2"
+                    placeholder="Password..."
+                  />
+                  <button
+                    class="read-more-btn btn rounded-pill text-light ps-5 pe-5 mt-4 fs-5"
+                    type="submit"
+                  >
+                    Sign in
+                  </button>
+                </form>
+              </div>
+            </li>
+            <li class="nav-item ms-lg-3 me-lg-3">
+              <button onclick="Search()" class="btn text-uppercase text-light">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </button>
+              <form action="" class="d-inline" id="navForm">
+                <input
+                  type="search"
+                  id="navSearch"
+                  class="bg-transparent text-light border border-2 border-white border-top-0 border-start-0 border-end-0"
+                  placeholder="Search..."
+                />
+              </form>
+            </li>
+            <li class="nav-item dropdown ms-3 me-3 fs-4">
+              <a
+                class="nav-link text-light"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <i class="fa-solid fa-bars-staggered"></i>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header id="furniture">
+      <div id="carouselExampleIndicators" class="carousel slide">
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="0"
+            class="slider-btn active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="1"
+            class="slider-btn"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="2"
+            class="slider-btn"
+            aria-label="Slide 3"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="3"
+            class="slider-btn"
+            aria-label="Slide 4"
+          ></button>
+        </div>
+        <div class="carousel-inner text-center text-md-start">
+          <div class="carousel-item active">
+            <div class="svg z-1 d-none d-md-block">
+              <div class="svg1">
+                <div class="chair">
+                  <img src="./assets/imgs/chair.png" alt="" />
+                </div>
+                <span class="slide-num text-light fs-2">01</span>
+              </div>
+              <div
+                class="play-btn z-1 d-flex align-items-center justify-content-center fs-2"
+              >
+                <i class="fa-solid fa-play"></i>
+              </div>
+            </div>
+            <div class="container slider-item">
+              <div class="row">
+                <div class="col-md-5 pt-5 pb-5 slide-content">
+                  <p class="header-p text-uppercase mb-0 fs-1">the latest</p>
+                  <h1 class="text-uppercase fw-normal">furniture</h1>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Cupiditate dolore assumenda quod, cum autem quos impedit
+                    ipsam? Ea asperiores quia consectetur quae in molestias
+                    molestiae error repudiandae, esse nam optio.
+                  </p>
+                  <button
+                    class="read-more-btn btn rounded-pill text-uppercase text-light ps-3 pe-3 m-1 ms-md-0"
+                  >
+                    read more
+                  </button>
+                  <button
+                    class="contact-us-btn btn rounded-pill text-uppercase text-light ps-3 pe-3 m-1"
+                  >
+                    contact us
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="svg z-1 d-none d-md-block">
+              <div class="svg1">
+                <div class="chair">
+                  <img src="./assets/imgs/chair.png" alt="" />
+                </div>
+                <span class="slide-num text-light fs-2">02</span>
+              </div>
+              <div
+                class="play-btn z-1 d-flex align-items-center justify-content-center fs-2"
+              >
+                <i class="fa-solid fa-play"></i>
+              </div>
+            </div>
+            <div class="container slider-item">
+              <div class="row">
+                <div class="col-md-5 pt-5 pb-5 slide-content">
+                  <p class="header-p text-uppercase mb-0 fs-1">the latest</p>
+                  <h1 class="text-uppercase fw-normal">furniture</h1>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Cupiditate dolore assumenda quod, cum autem quos impedit
+                    ipsam? Ea asperiores quia consectetur quae in molestias
+                    molestiae error repudiandae, esse nam optio.
+                  </p>
+                  <button
+                    class="read-more-btn btn rounded-pill text-uppercase text-light ps-3 pe-3 m-1 ms-md-0"
+                  >
+                    read more
+                  </button>
+                  <button
+                    class="contact-us-btn btn rounded-pill text-uppercase text-light ps-3 pe-3 m-1"
+                  >
+                    contact us
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="svg z-1 d-none d-md-block">
+              <div class="svg1">
+                <div class="chair">
+                  <img src="./assets/imgs/chair.png" alt="" />
+                </div>
+                <span class="slide-num text-light fs-2">03</span>
+              </div>
+              <div
+                class="play-btn z-1 d-flex align-items-center justify-content-center fs-2"
+              >
+                <i class="fa-solid fa-play"></i>
+              </div>
+            </div>
+            <div class="container slider-item">
+              <div class="row">
+                <div class="col-md-5 pt-5 pb-5 slide-content">
+                  <p class="header-p text-uppercase mb-0 fs-1">the latest</p>
+                  <h1 class="text-uppercase fw-normal">furniture</h1>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Cupiditate dolore assumenda quod, cum autem quos impedit
+                    ipsam? Ea asperiores quia consectetur quae in molestias
+                    molestiae error repudiandae, esse nam optio.
+                  </p>
+                  <button
+                    class="read-more-btn btn rounded-pill text-uppercase text-light ps-3 pe-3 m-1 ms-md-0"
+                  >
+                    read more
+                  </button>
+                  <button
+                    class="contact-us-btn btn rounded-pill text-uppercase text-light ps-3 pe-3 m-1"
+                  >
+                    contact us
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="svg z-1 d-none d-md-block">
+              <div class="svg1">
+                <div class="chair">
+                  <img src="./assets/imgs/chair.png" alt="" />
+                </div>
+                <span class="slide-num text-light fs-2">04</span>
+              </div>
+              <div
+                class="play-btn z-1 d-flex align-items-center justify-content-center fs-2"
+              >
+                <i class="fa-solid fa-play"></i>
+              </div>
+            </div>
+            <div class="container slider-item">
+              <div class="row">
+                <div class="col-md-5 pt-5 pb-5 slide-content">
+                  <p class="header-p text-uppercase mb-0 fs-1">the latest</p>
+                  <h1 class="text-uppercase fw-normal">furniture</h1>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Cupiditate dolore assumenda quod, cum autem quos impedit
+                    ipsam? Ea asperiores quia consectetur quae in molestias
+                    molestiae error repudiandae, esse nam optio.
+                  </p>
+                  <button
+                    class="read-more-btn btn rounded-pill text-uppercase text-light ps-3 pe-3 m-1 ms-md-0"
+                  >
+                    read more
+                  </button>
+                  <button
+                    class="contact-us-btn btn rounded-pill text-uppercase text-light ps-3 pe-3 m-1"
+                  >
+                    contact us
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="about-us" id="about">
+        <div class="container slider-item">
+          <div class="row align-items-center">
+            <div class="col-md-5 col-lg-6 pt-5 pb-5 text-center text-md-start">
+              <h2 class="h2">About Us</h2>
+              <span class="affter-line"></span>
+              <p class="mt-5 mb-5">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Molestias odit saepe deleniti, accusantium maiores magnam
+                possimus eum fugiat magni laboriosam aut laborum quod quam,
+                eaque dolorum debitis autem ratione ullam?
+              </p>
+              <button
+                class="contact-us-btn btn rounded-pill text-light ps-3 pe-3 ms-1"
+              >
+                Read More
+              </button>
+            </div>
+            <div class="col-md-7 col-lg-6 d-flex justify-content-center mt-5">
+              <div class="mold d-flex justify-content-center position-relative">
+                <span
+                  class="circle1 d-flex align-items-center justify-content-center fw-bold fs-4"
+                  >01</span
+                >
+                <span class="circle2"></span>
+                <span class="circle3"></span>
+                <span class="circle4"></span>
+                <span class="circle5"></span>
+                <span class="circle6"></span>
+                <div>
+                  <img src="./assets/imgs/img2.png" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="trending-categories" id="shop">
+        <div class="container slider-item text-center text-md-start">
+          <h2 class="h2 fw-normal">Trending Categories</h2>
+          <span class="affter-line"></span>
+          <div class="row">
+            <div class="col-md-6 p-0 p-md-3">
+              <ul
+                class="nav nav-tabs trending-list pt-5 pb-5 ps-0 border-0"
+                id="myTab"
+                role="tablist"
+              >
+                <li
+                  class="nav-item col-6 col-md-12 mt-5 mb-5"
+                  role="presentation"
+                >
+                  <span class="trending-num fs-5 fw-medium">01</span>
+                  <span
+                    class="affter-line ms-2 me-md-5 d-none d-md-inline-block"
+                  ></span>
+                  <button
+                    class="nav-link p-0 fs-4 fw-medium d-inline active"
+                    id="Chairs-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#Chairs-tab-pane"
+                    type="button"
+                    role="tab"
+                    aria-controls="Chairs-tab-pane"
+                    aria-selected="true"
+                  >
+                    Chairs
+                  </button>
+                </li>
+                <li
+                  class="nav-item col-6 col-md-12 mt-5 mb-5"
+                  role="presentation"
+                >
+                  <span class="trending-num fs-5 fw-medium">02</span>
+                  <span
+                    class="affter-line ms-2 me-md-5 d-none d-md-inline-block"
+                  ></span>
+                  <button
+                    class="nav-link p-0 fs-4 fw-medium d-inline"
+                    id="Tables-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#Tables-tab-pane"
+                    type="button"
+                    role="tab"
+                    aria-controls="Tables-tab-pane"
+                    aria-selected="false"
+                  >
+                    Tables
+                  </button>
+                </li>
+                <li
+                  class="nav-item col-6 col-md-12 mt-5 mb-5"
+                  role="presentation"
+                >
+                  <span class="trending-num fs-5 fw-medium">03</span>
+                  <span
+                    class="affter-line ms-2 me-md-5 d-none d-md-inline-block"
+                  ></span>
+                  <button
+                    class="nav-link p-0 fs-4 fw-medium d-inline"
+                    id="Bads-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#Bads-tab-pane"
+                    type="button"
+                    role="tab"
+                    aria-controls="Bads-tab-pane"
+                    aria-selected="false"
+                  >
+                    Bads
+                  </button>
+                </li>
+                <li
+                  class="nav-item col-6 col-md-12 mt-5 mb-5"
+                  role="presentation"
+                >
+                  <span class="trending-num fs-5 fw-medium">04</span>
+                  <span
+                    class="affter-line ms-2 me-md-5 d-none d-md-inline-block"
+                  ></span>
+                  <button
+                    class="nav-link p-0 fs-4 fw-medium d-inline"
+                    id="Furnitures-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#Furnitures-tab-pane"
+                    type="button"
+                    role="tab"
+                    aria-controls="Furnitures-tab-pane"
+                    aria-selected="false"
+                  >
+                    Furnitures
+                  </button>
+                </li>
+              </ul>
+            </div>
+            <div class="col-md-6 mt-5">
+              <div class="tab-content" id="myTabContent">
+                <div
+                  class="tab-pane fade show active"
+                  id="Chairs-tab-pane"
+                  role="tabpanel"
+                  aria-labelledby="Chairs-tab"
+                  tabindex="0"
+                >
+                  <div class="row transform">
+                    <div class="col-6 ps-0 pe-3 mt-5 text-end">
+                      <div class="pb-3">
+                        <img
+                          class="w-100"
+                          src="./assets/imgs/chair1.png"
+                          alt=""
+                        />
+                      </div>
+                      <div class="pt-3">
+                        <img
+                          class="w-100"
+                          src="./assets/imgs/chair3.png"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="col-6 ps-3 pe-0 text-start">
+                      <div class="pb-3">
+                        <img
+                          class="w-100"
+                          src="./assets/imgs/chair2.png"
+                          alt=""
+                        />
+                      </div>
+                      <div class="pt-3">
+                        <img
+                          class="w-100"
+                          src="./assets/imgs/chair4.png"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="tab-pane fade"
+                  id="Tables-tab-pane"
+                  role="tabpanel"
+                  aria-labelledby="Tables-tab"
+                  tabindex="0"
+                >
+                  <div class="row transform">
+                    <div class="col-6 ps-0 pe-3 mt-5 text-end">
+                      <div class="pb-3">
+                        <img
+                          class="w-100"
+                          src="./assets/imgs/chair1.png"
+                          alt=""
+                        />
+                      </div>
+                      <div class="pt-3">
+                        <img
+                          class="w-100"
+                          src="./assets/imgs/chair3.png"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="col-6 ps-3 pe-0 text-start">
+                      <div class="pb-3">
+                        <img
+                          class="w-100"
+                          src="./assets/imgs/chair2.png"
+                          alt=""
+                        />
+                      </div>
+                      <div class="pt-3">
+                        <img
+                          class="w-100"
+                          src="./assets/imgs/chair4.png"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="tab-pane fade"
+                  id="Bads-tab-pane"
+                  role="tabpanel"
+                  aria-labelledby="Bads-tab"
+                  tabindex="0"
+                >
+                  <div class="row transform">
+                    <div class="col-6 ps-0 pe-3 mt-5 text-end">
+                      <div class="pb-3">
+                        <img
+                          class="w-100"
+                          src="./assets/imgs/chair1.png"
+                          alt=""
+                        />
+                      </div>
+                      <div class="pt-3">
+                        <img
+                          class="w-100"
+                          src="./assets/imgs/chair3.png"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="col-6 ps-3 pe-0 text-start">
+                      <div class="pb-3">
+                        <img
+                          class="w-100"
+                          src="./assets/imgs/chair2.png"
+                          alt=""
+                        />
+                      </div>
+                      <div class="pt-3">
+                        <img
+                          class="w-100"
+                          src="./assets/imgs/chair4.png"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="tab-pane fade"
+                  id="Furnitures-tab-pane"
+                  role="tabpanel"
+                  aria-labelledby="Furnitures-tab"
+                  tabindex="0"
+                >
+                  <div class="row transform">
+                    <div class="col-6 ps-0 pe-3 mt-5 text-end">
+                      <div class="pb-3">
+                        <img
+                          class="w-100"
+                          src="./assets/imgs/chair1.png"
+                          alt=""
+                        />
+                      </div>
+                      <div class="pt-3">
+                        <img
+                          class="w-100"
+                          src="./assets/imgs/chair3.png"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="col-6 ps-3 pe-0 text-start">
+                      <div class="pb-3">
+                        <img
+                          class="w-100"
+                          src="./assets/imgs/chair2.png"
+                          alt=""
+                        />
+                      </div>
+                      <div class="pt-3">
+                        <img
+                          class="w-100"
+                          src="./assets/imgs/chair4.png"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="latest-collection">
+        <div class="container slider-item">
+          <div class="row align-items-end text-center">
+            <div class="col-md-6">
+              <h2 class="text-center fs-1">The Latest Collection</h2>
+              <p class="text-uppercase discount text-md-start">50% discount</p>
+              <div class="text-md-start">
+                <button
+                  class="contact-us-btn btn rounded-pill text-light ps-4 pe-4 mb-5 buy-btn"
+                >
+                  Buy Now
+                </button>
+              </div>
+            </div>
+            <div class="col-md-6 d-flex justify-content-center mt-5">
+              <div class="mold d-flex justify-content-center position-relative">
+                <span
+                  class="circle1 d-flex align-items-center justify-content-center"
+                ></span>
+                <span class="circle2"></span>
+                <span class="circle3"></span>
+                <span class="circle4"></span>
+                <span class="circle5"></span>
+                <span class="circle6"></span>
+                <div>
+                  <img src="./assets/imgs/img3.png" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="featured-brands">
+        <div class="container slider-item text-center text-md-start">
+          <div class="pb-5 mb-5">
+            <h2 class="d-inline fs-1">Featured Brands</h2>
+            <span class="affter-line"></span>
+          </div>
+          <div class="row">
+            <div class="col-md-3 col-sm-6 ps-3 pe-3">
+              <div class="brand new pt-5 ps-3 pe-3 text-center">
+                <div class="mt-5">
+                  <img class="w-75" src="./assets/imgs/chair.png" alt="" />
+                </div>
+                <span class="price fs-4 fw-medium">$100</span>
+                <p class="fs-4 fw-medium">chair</p>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-6 ps-3 pe-3">
+              <div class="brand pt-5 ps-3 pe-3 text-center">
+                <div class="mt-5">
+                  <img class="w-75" src="./assets/imgs/chair.png" alt="" />
+                </div>
+                <span class="price fs-4 fw-medium">$100</span>
+                <p class="fs-4 fw-medium">chair</p>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-6 ps-3 pe-3">
+              <div class="brand pt-5 ps-3 pe-3 text-center">
+                <div class="mt-5">
+                  <img class="w-75" src="./assets/imgs/chair.png" alt="" />
+                </div>
+                <span class="price fs-4 fw-medium">$100</span>
+                <p class="fs-4 fw-medium">chair</p>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-6 ps-3 pe-3">
+              <div class="brand pt-5 ps-3 pe-3 text-center">
+                <div class="mt-5">
+                  <img class="w-75" src="./assets/imgs/chair.png" alt="" />
+                </div>
+                <span class="price fs-4 fw-medium">$100</span>
+                <p class="fs-4 fw-medium">chair</p>
+              </div>
+            </div>
+          </div>
+          <button
+            class="contact-us-btn btn rounded-pill text-light ps-4 pe-4 mt-5"
+          >
+            See More
+          </button>
+        </div>
+      </section>
+
+      <section class="contact-us" id="contact">
+        <div class="container slider-item text-center text-md-start">
+          <div class="mb-5">
+            <h2 class="fs-1 d-inline">Conatct Us</h2>
+            <span class="affter-line"></span>
+          </div>
+          <div class="row">
+            <div class="col-md-6 mb-4">
+              <form action="">
+                <div class="mb-4">
+                  <input
+                    class="d-block w-100 bg-white border-0 p-3"
+                    type="text"
+                    placeholder="Name"
+                  />
+                  <span class="error-message m-0"></span>
+                </div>
+                <div class="mt-4 mb-4">
+                  <input
+                    class="d-block w-100 bg-white border-0 p-3"
+                    type="email"
+                    placeholder="Email"
+                  />
+                  <span class="error-message"></span>
+                </div>
+                <div class="mt-4 mb-4">
+                  <input
+                    class="d-block w-100 bg-white border-0 p-3"
+                    type="number"
+                    placeholder="Phone"
+                  />
+                  <span class="error-message"></span>
+                </div>
+                <textarea
+                  class="d-block w-100 bg-white border-0 ps-3 pe-3 pt-5 pb-5 mt-4"
+                  placeholder="Message"
+                ></textarea>
               </form>
             </div>
-          </li>
-          <li class="nav-item ms-lg-3 me-lg-3">
-            <button onclick="Search()" class="btn text-uppercase text-light"><i class="fa-solid fa-magnifying-glass"></i></button>
-            <form action="" class="d-inline" id="navForm">
-              <input type="search" id="navSearch" class="bg-transparent text-light border border-2 border-white border-top-0 border-start-0 border-end-0" placeholder="Search...">
-            </form>
-          </li>
-          <li class="nav-item dropdown ms-3 me-3 fs-4">
-            <a class="nav-link text-light" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              <i class="fa-solid fa-bars-staggered"></i>
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item " href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+            <div class="col-md-6 mb-4">
+              <img class="w-100 img-map" src="./assets/imgs/map.png" alt="" />
+            </div>
+          </div>
+          <button
+            class="read-more-btn btn rounded-pill text-light ps-5 pe-5 mt-5 fs-5 text-uppercase"
+            type="submit"
+          >
+            Send
+          </button>
+        </div>
+      </section>
 
-  <header id="furniture">
-    <div id="carouselExampleIndicators" class="carousel slide">
-      <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="slider-btn active" aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" class="slider-btn" aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" class="slider-btn" aria-label="Slide 3"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" class="slider-btn" aria-label="Slide 4"></button>
-      </div>
-      <div class="carousel-inner text-center text-md-start">
-        <div class="carousel-item active">
-          <div class="svg z-1 d-none d-md-block">
-            <div class="svg1">
-              <div class="chair">
-                <img src="./assets/imgs/chair.png" alt="">
-              </div>
-              <span class="slide-num text-light fs-2">01</span>
-            </div>
-            <div class="play-btn z-1 d-flex align-items-center justify-content-center fs-2">
-              <i class="fa-solid fa-play"></i>
-            </div>
-          </div>
-          <div class="container slider-item">
-            <div class="row">
-              <div class="col-md-5 pt-5 pb-5 slide-content">
-                <p class="header-p text-uppercase mb-0 fs-1">the latest</p>
-                <h1 class="text-uppercase fw-normal">furniture</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate dolore assumenda quod, cum autem quos impedit ipsam? Ea asperiores quia consectetur quae in molestias molestiae error repudiandae, esse nam optio.</p>
-                <button class="read-more-btn btn rounded-pill text-uppercase text-light ps-3 pe-3 me-1">read more</button>
-                <button class="contact-us-btn btn rounded-pill text-uppercase text-light ps-3 pe-3 ms-1">contact us</button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <div class="svg z-1 d-none d-md-block">
-            <div class="svg1">
-              <div class="chair">
-                <img src="./assets/imgs/chair.png" alt="">
-              </div>
-              <span class="slide-num text-light fs-2">02</span>
-            </div>
-            <div class="play-btn z-1 d-flex align-items-center justify-content-center fs-2">
-              <i class="fa-solid fa-play"></i>
-            </div>
-          </div>
-          <div class="container slider-item">
-            <div class="row">
-              <div class="col-md-5 pt-5 pb-5 slide-content">
-                <p class="header-p text-uppercase mb-0 fs-1">the latest</p>
-                <h1 class="text-uppercase fw-normal">furniture</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate dolore assumenda quod, cum autem quos impedit ipsam? Ea asperiores quia consectetur quae in molestias molestiae error repudiandae, esse nam optio.</p>
-                <button class="read-more-btn btn rounded-pill text-uppercase text-light ps-3 pe-3 me-1">read more</button>
-                <button class="contact-us-btn btn rounded-pill text-uppercase text-light ps-3 pe-3 ms-1">contact us</button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <div class="svg z-1 d-none d-md-block">
-            <div class="svg1">
-              <div class="chair">
-                <img src="./assets/imgs/chair.png" alt="">
-              </div>
-              <span class="slide-num text-light fs-2">03</span>
-            </div>
-            <div class="play-btn z-1 d-flex align-items-center justify-content-center fs-2">
-              <i class="fa-solid fa-play"></i>
-            </div>
-          </div>
-          <div class="container slider-item">
-            <div class="row">
-              <div class="col-md-5 pt-5 pb-5 slide-content">
-                <p class="header-p text-uppercase mb-0 fs-1">the latest</p>
-                <h1 class="text-uppercase fw-normal">furniture</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate dolore assumenda quod, cum autem quos impedit ipsam? Ea asperiores quia consectetur quae in molestias molestiae error repudiandae, esse nam optio.</p>
-                <button class="read-more-btn btn rounded-pill text-uppercase text-light ps-3 pe-3 me-1">read more</button>
-                <button class="contact-us-btn btn rounded-pill text-uppercase text-light ps-3 pe-3 ms-1">contact us</button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <div class="svg z-1 d-none d-md-block">
-            <div class="svg1">
-              <div class="chair">
-                <img src="./assets/imgs/chair.png" alt="">
-              </div>
-              <span class="slide-num text-light fs-2">04</span>
-            </div>
-            <div class="play-btn z-1 d-flex align-items-center justify-content-center fs-2">
-              <i class="fa-solid fa-play"></i>
-            </div>
-          </div>
-          <div class="container slider-item">
-            <div class="row">
-              <div class="col-md-5 pt-5 pb-5 slide-content">
-                <p class="header-p text-uppercase mb-0 fs-1">the latest</p>
-                <h1 class="text-uppercase fw-normal">furniture</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate dolore assumenda quod, cum autem quos impedit ipsam? Ea asperiores quia consectetur quae in molestias molestiae error repudiandae, esse nam optio.</p>
-                <button class="read-more-btn btn rounded-pill text-uppercase text-light ps-3 pe-3 me-1">read more</button>
-                <button class="contact-us-btn btn rounded-pill text-uppercase text-light ps-3 pe-3 ms-1">contact us</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
-  
-  <main>
-    <section class="about-us" id="about">
-      <div class="container slider-item">
-        <div class="row align-items-center">
-          <div class="col-md-5 col-lg-6 pt-5 pb-5 text-center text-md-start">
-            <h2 class="h2">About Us</h2>
+      <section class="testimonial">
+        <div class="container slider-item">
+          <div class="mb-5 pb-5 text-center text-md-start">
+            <h2 class="fs-1 d-inline">Testimonial</h2>
             <span class="affter-line"></span>
-            <p class="mt-5 mb-5">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias odit saepe deleniti, accusantium maiores magnam possimus eum fugiat magni laboriosam aut laborum quod quam, eaque dolorum debitis autem ratione ullam?</p>
-            <button class="contact-us-btn btn rounded-pill text-light ps-3 pe-3 ms-1">Read More</button>
           </div>
-          <div class="col-md-7 col-lg-6 d-flex justify-content-center mt-5">
-            <div class="mold d-flex justify-content-center position-relative">
-              <span class="circle1 d-flex align-items-center justify-content-center fw-bold fs-4">01</span>
-              <span class="circle2"></span>
-              <span class="circle3"></span>
-              <span class="circle4"></span>
-              <span class="circle5"></span>
-              <span class="circle6"></span>
-              <div>
-                <img src="./assets/imgs/img2.png" alt="">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="card p-5 pt-4 pb-4 mb-3 border-0">
+                <div class="row align-items-center mb-4">
+                  <div class="col-4 p-0">
+                    <div class="person-img w-75">
+                      <img
+                        class="w-100 h-100"
+                        src="./assets/imgs/person1.png"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                  <div class="col-8 p-0">
+                    <h3 class="fs-5 fw-bold mb-0">Magna</h3>
+                    <span class="fw-medium">Consectetur adipiscing</span>
+                  </div>
+                </div>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Quibusdam nobis voluptatum, eligendi laborum labore sunt harum
+                  perspiciatis minima quidem quisquam eaque amet animi vel
+                  impedit ullam itaque soluta ipsa accusamus?
+                </p>
+                <span class="fs-4 back-btn"
+                  ><i class="fa-solid fa-arrow-left"></i
+                ></span>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="card p-5 pt-4 pb-4 border-0">
+                <div class="row align-items-center mb-4">
+                  <div class="col-4 p-0">
+                    <div class="person-img w-75">
+                      <img
+                        class="w-100 h-100"
+                        src="./assets/imgs/person2.png"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                  <div class="col-8 p-0">
+                    <h3 class="fs-5 fw-bold mb-0">Aliqua</h3>
+                    <span class="fw-medium">Consectetur adipiscing</span>
+                  </div>
+                </div>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Quibusdam nobis voluptatum, eligendi laborum labore sunt harum
+                  perspiciatis minima quidem quisquam eaque amet animi vel
+                  impedit ullam itaque soluta ipsa accusamus?
+                </p>
+                <span class="fs-4 back-btn"
+                  ><i class="fa-solid fa-arrow-left"></i
+                ></span>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </main>
 
-    <section class="trending-categories" id="shop">
-      <div class="container slider-item text-center text-md-start">
-        <h2 class="h2 fw-normal">Trending Categories</h2>
-        <span class="affter-line"></span>
+    <footer>
+      <div class="container slider-item text-light text-center text-md-start">
+        <div class="text-center mb-4">
+          <h2 class="text-uppercase fs-1 fw-bold mb-3">digitf</h2>
+          <span class="footer-line w-75 d-inline-block"></span>
+        </div>
         <div class="row">
-          <div class="col-md-6 p-0 p-md-3">
-            <ul class="nav nav-tabs trending-list pt-5 pb-5 ps-0 border-0" id="myTab" role="tablist">
-              <li class="nav-item col-6 col-md-12 mt-5 mb-5" role="presentation">
-                <span class="trending-num fs-5 fw-medium">01</span>
-                <span class="affter-line ms-2 me-md-5 d-none d-md-inline-block"></span>
-                <button class="nav-link p-0 fs-4 fw-medium d-inline active" id="Chairs-tab" data-bs-toggle="tab" data-bs-target="#Chairs-tab-pane" type="button" role="tab" aria-controls="Chairs-tab-pane" aria-selected="true">
-                  Chairs
-                </button>
+          <div class="col-lg-3 col-md-5 mb-5">
+            <h3 class="mb-5">About Shop</h3>
+            <ul class="ps-0">
+              <li class="pt-2 pb-2">
+                <i class="fa-solid fa-location-dot"></i
+                ><span class="ms-3">Address</span>
               </li>
-              <li class="nav-item col-6 col-md-12 mt-5 mb-5" role="presentation">
-                <span class="trending-num fs-5 fw-medium">02</span>
-                <span class="affter-line ms-2 me-md-5 d-none d-md-inline-block"></span>
-                <button class="nav-link p-0 fs-4 fw-medium d-inline" id="Tables-tab" data-bs-toggle="tab" data-bs-target="#Tables-tab-pane" type="button" role="tab" aria-controls="Tables-tab-pane" aria-selected="false">
-                  Tables
-                </button>
+              <li class="pt-2 pb-2">
+                <i class="fa-solid fa-mobile-screen-button"></i
+                ><span class="ms-3">+01 1234567890</span>
               </li>
-              <li class="nav-item col-6 col-md-12 mt-5 mb-5" role="presentation">
-                <span class="trending-num fs-5 fw-medium">03</span>
-                <span class="affter-line ms-2 me-md-5 d-none d-md-inline-block"></span>
-                <button class="nav-link p-0 fs-4 fw-medium d-inline" id="Bads-tab" data-bs-toggle="tab" data-bs-target="#Bads-tab-pane" type="button" role="tab" aria-controls="Bads-tab-pane" aria-selected="false">
-                  Bads
-                </button>
-              </li>
-              <li class="nav-item col-6 col-md-12 mt-5 mb-5" role="presentation">
-                <span class="trending-num fs-5 fw-medium">04</span>
-                <span class="affter-line ms-2 me-md-5 d-none d-md-inline-block"></span>
-                <button class="nav-link p-0 fs-4 fw-medium d-inline" id="Furnitures-tab" data-bs-toggle+="tab" data-bs-target="#Furnitures-tab-pane" type="button" role="tab" aria-controls="Furnitures-tab-pane" aria-selected="false">
-                  Furnitures
-                </button>
+              <li class="pt-2 pb-2">
+                <i class="fa-solid fa-envelope"></i
+                ><span class="ms-3">demo@gmail.com</span>
               </li>
             </ul>
           </div>
-          <div class="col-md-6 mt-5">
-            <div class="tab-content" id="myTabContent">
-              <div class="tab-pane fade show active" id="Chairs-tab-pane" role="tabpanel" aria-labelledby="Chairs-tab" tabindex="0">
-                <div class="row transform">
-                  <div class="col-6 ps-0 pe-3 mt-5 text-end">
-                    <div class="pb-3">
-                      <img class="w-100" src="./assets/imgs/chair1.png" alt="">
-                    </div>
-                    <div class="pt-3">
-                      <img class="w-100" src="./assets/imgs/chair3.png" alt="">
-                    </div>
-                  </div>
-                  <div class="col-6 ps-3 pe-0 text-start">
-                    <div class="pb-3">
-                      <img class="w-100" src="./assets/imgs/chair2.png" alt="">
-                    </div>
-                    <div class="pt-3">
-                      <img class="w-100" src="./assets/imgs/chair4.png" alt="">
-                    </div>
-                  </div>
+          <div class="col-md-2 d-none d-md-block d-lg-none"></div>
+          <div class="col-xl-2 col-lg-3 col-md-5 mb-5">
+            <h3 class="mb-5">Informations</h3>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit
+              sequi saepe exercitationem veritatis voluptatibus, magni
+              laboriosam. Aliquam illo, tempora provident aliquid quam expedita
+              porro ipsum hic, explicabo ea, itaque placeat.
+            </p>
+          </div>
+          <div class="col-xl-1 d-none d-xl-block"></div>
+          <div class="col-lg-2 col-md-5 mb-5">
+            <h3 class="mb-4">Instagram</h3>
+            <div class="row">
+              <div
+                class="col-6 mb-3 d-flex justify-content-center justify-content-md-start"
+              >
+                <div class="w-75">
+                  <img class="w-100" src="./assets/imgs/img2.png" alt="" />
                 </div>
               </div>
-              <div class="tab-pane fade" id="Tables-tab-pane" role="tabpanel" aria-labelledby="Tables-tab" tabindex="0">
-                <div class="row transform">
-                  <div class="col-6 ps-0 pe-3 mt-5 text-end">
-                    <div class="pb-3">
-                      <img class="w-100" src="./assets/imgs/chair1.png" alt="">
-                    </div>
-                    <div class="pt-3">
-                      <img class="w-100" src="./assets/imgs/chair3.png" alt="">
-                    </div>
-                  </div>
-                  <div class="col-6 ps-3 pe-0 text-start">
-                    <div class="pb-3">
-                      <img class="w-100" src="./assets/imgs/chair2.png" alt="">
-                    </div>
-                    <div class="pt-3">
-                      <img class="w-100" src="./assets/imgs/chair4.png" alt="">
-                    </div>
-                  </div>
+              <div
+                class="col-6 mb-3 d-flex justify-content-center justify-content-md-start"
+              >
+                <div class="w-75">
+                  <img class="w-100" src="./assets/imgs/img2.png" alt="" />
                 </div>
               </div>
-              <div class="tab-pane fade" id="Bads-tab-pane" role="tabpanel" aria-labelledby="Bads-tab" tabindex="0">
-                <div class="row transform">
-                  <div class="col-6 ps-0 pe-3 mt-5 text-end">
-                    <div class="pb-3">
-                      <img class="w-100" src="./assets/imgs/chair1.png" alt="">
-                    </div>
-                    <div class="pt-3">
-                      <img class="w-100" src="./assets/imgs/chair3.png" alt="">
-                    </div>
-                  </div>
-                  <div class="col-6 ps-3 pe-0 text-start">
-                    <div class="pb-3">
-                      <img class="w-100" src="./assets/imgs/chair2.png" alt="">
-                    </div>
-                    <div class="pt-3">
-                      <img class="w-100" src="./assets/imgs/chair4.png" alt="">
-                    </div>
-                  </div>
+              <div
+                class="col-6 mb-3 d-flex justify-content-center justify-content-md-start"
+              >
+                <div class="w-75">
+                  <img class="w-100" src="./assets/imgs/img2.png" alt="" />
                 </div>
               </div>
-              <div class="tab-pane fade" id="Furnitures-tab-pane" role="tabpanel" aria-labelledby="Furnitures-tab" tabindex="0">
-                <div class="row transform">
-                  <div class="col-6 ps-0 pe-3 mt-5 text-end">
-                    <div class="pb-3">
-                      <img class="w-100" src="./assets/imgs/chair1.png" alt="">
-                    </div>
-                    <div class="pt-3">
-                      <img class="w-100" src="./assets/imgs/chair3.png" alt="">
-                    </div>
-                  </div>
-                  <div class="col-6 ps-3 pe-0 text-start">
-                    <div class="pb-3">
-                      <img class="w-100" src="./assets/imgs/chair2.png" alt="">
-                    </div>
-                    <div class="pt-3">
-                      <img class="w-100" src="./assets/imgs/chair4.png" alt="">
-                    </div>
-                  </div>
+              <div
+                class="col-6 mb-3 d-flex justify-content-center justify-content-md-start"
+              >
+                <div class="w-75">
+                  <img class="w-100" src="./assets/imgs/img2.png" alt="" />
+                </div>
+              </div>
+              <div
+                class="col-6 mb-3 d-flex justify-content-center justify-content-md-start"
+              >
+                <div class="w-75">
+                  <img class="w-100" src="./assets/imgs/img2.png" alt="" />
+                </div>
+              </div>
+              <div
+                class="col-6 mb-3 d-flex justify-content-center justify-content-md-start"
+              >
+                <div class="w-75">
+                  <img class="w-100" src="./assets/imgs/img2.png" alt="" />
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="latest-collection">
-      <div class="container slider-item">
-        <div class="row align-items-end text-center">
-          <div class="col-md-6">
-            <h2 class="text-center fs-1">The Latest Collection</h2>
-            <p class="text-uppercase discount text-md-start">50% discount</p>
-            <div class="text-md-start">
-              <button class="contact-us-btn btn rounded-pill text-light ps-4 pe-4 mb-5 buy-btn">Buy Now</button>
-            </div>
-          </div>
-          <div class="col-md-6 d-flex justify-content-center mt-5">
-            <div class="mold d-flex justify-content-center position-relative">
-              <span class="circle1 d-flex align-items-center justify-content-center"></span>
-              <span class="circle2"></span>
-              <span class="circle3"></span>
-              <span class="circle4"></span>
-              <span class="circle5"></span>
-              <span class="circle6"></span>
-              <div>
-                <img src="./assets/imgs/img3.png" alt="">
-              </div>              
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="featured-brands">
-      <div class="container slider-item text-center text-md-start">
-        <div class="pb-5 mb-5">
-          <h2 class="d-inline fs-1">Featured Brands</h2>
-          <span class="affter-line"></span>
-        </div>
-        <div class="row">
-          <div class="col-md-3 col-sm-6 ps-3 pe-3">
-            <div class="brand new pt-5 ps-3 pe-3 text-center">
-              <div class="mt-5">
-                <img class="w-75" src="./assets/imgs/chair.png" alt="">
-              </div>
-              <span class="price fs-4 fw-medium">$100</span>
-              <p class="fs-4 fw-medium">chair</p>
-            </div>
-          </div>
-          <div class="col-md-3 col-sm-6 ps-3 pe-3">
-            <div class="brand pt-5 ps-3 pe-3 text-center">
-              <div class="mt-5">
-                <img class="w-75" src="./assets/imgs/chair.png" alt="">
-              </div>
-              <span class="price fs-4 fw-medium">$100</span>
-              <p class="fs-4 fw-medium">chair</p>
-            </div>
-          </div>
-          <div class="col-md-3 col-sm-6 ps-3 pe-3">
-            <div class="brand pt-5 ps-3 pe-3 text-center">
-              <div class="mt-5">
-                <img class="w-75" src="./assets/imgs/chair.png" alt="">
-              </div>
-              <span class="price fs-4 fw-medium">$100</span>
-              <p class="fs-4 fw-medium">chair</p>
-            </div>
-          </div>
-          <div class="col-md-3 col-sm-6 ps-3 pe-3">
-            <div class="brand pt-5 ps-3 pe-3 text-center">
-              <div class="mt-5">
-                <img class="w-75" src="./assets/imgs/chair.png" alt="">
-              </div>
-              <span class="price fs-4 fw-medium">$100</span>
-              <p class="fs-4 fw-medium">chair</p>
-            </div>
-          </div>
-        </div>
-        <button class="contact-us-btn btn rounded-pill text-light ps-4 pe-4 mt-5">See More</button>
-      </div>
-    </section>
-
-    <section class="contact-us" id="contact">
-      <div class="container slider-item text-center text-md-start">
-        <div class="mb-5">
-          <h2 class="fs-1 d-inline">Conatct Us</h2>
-          <span class="affter-line"></span>
-        </div>
-        <div class="row">
-          <div class="col-md-6 mb-4">
+          <div
+            class="col-xl-1 col-md-2 d-none d-md-block d-lg-none d-xl-block"
+          ></div>
+          <div class="col-xl-3 col-lg-4 col-md-5 mb-5">
+            <h3 class="mb-4">Newsletter</h3>
             <form action="">
-              <div class="mb-4">
-                <input class="d-block w-100 bg-white border-0 p-3" type="text" placeholder="Name">
-                <span class="error-message m-0"></span>
-              </div>
-              <div class="mt-4 mb-4">
-                <input class="d-block w-100 bg-white border-0 p-3" type="email" placeholder="Email">
-                <span class="error-message"></span>
-              </div>
-              <div class="mt-4 mb-4">
-                <input class="d-block w-100 bg-white border-0 p-3" type="number" placeholder="Phone">
-                <span class="error-message"></span>
-              </div>
-              <textarea class="d-block w-100 bg-white border-0 ps-3 pe-3 pt-5 pb-5 mt-4" placeholder="Message"></textarea>
+              <input
+                type="email"
+                class="p-3 pt-1 pb-1 w-100 fs-5 mb-2"
+                placeholder="Enter your email"
+              />
+              <button
+                class="read-more-btn btn rounded-0 text-uppercase text-light ps-4 pe-4 mt-3"
+                type="submit"
+              >
+                subscribe
+              </button>
             </form>
-          </div>
-          <div class="col-md-6 mb-4">
-            <img class="w-100 img-map" src="./assets/imgs/map.png" alt="">
+            <ul class="mt-4 p-0">
+              <li class="d-inline fs-3 me-3">
+                <a href="#" class="text-light social-link"
+                  ><i class="fa-brands fa-facebook-f"></i
+                ></a>
+              </li>
+              <li class="d-inline fs-3 ms-3 me-3">
+                <a href="#" class="text-light social-link"
+                  ><i class="fa-brands fa-twitter"></i
+                ></a>
+              </li>
+              <li class="d-inline fs-3 ms-3 me-3">
+                <a href="#" class="text-light social-link"
+                  ><i class="fa-brands fa-linkedin-in"></i
+                ></a>
+              </li>
+              <li class="d-inline fs-3 ms-3 me-3">
+                <a href="#" class="text-light social-link"
+                  ><i class="fa-brands fa-youtube"></i
+                ></a>
+              </li>
+            </ul>
           </div>
         </div>
-        <button class="read-more-btn btn rounded-pill text-light ps-5 pe-5 mt-5 fs-5 text-uppercase" type="submit">Send</button>
       </div>
-    </section>
+      <div class="bg-white text-center pt-3 pb-3">
+        <p class="copyright m-0">
+          &copy; 2019 All Rights Reserved. Free html Templates
+        </p>
+      </div>
+    </footer>
 
-    <section class="testimonial">
-      <div class="container slider-item">
-        <div class="mb-5 pb-5 text-center text-md-start">
-          <h2 class="fs-1 d-inline">Testimonial</h2>
-          <span class="affter-line"></span>
-        </div>
-        <div class="row">
-          <div class="col-md-6">
-            <div class="card p-5 pt-4 pb-4 mb-3 border-0">
-              <div class="row align-items-center mb-4">
-                <div class="col-4 p-0">
-                  <div class="person-img w-75">
-                    <img class="w-100 h-100" src="./assets/imgs/person1.png" alt="">
-                  </div>
-                </div>
-                <div class="col-8 p-0">
-                  <h3 class="fs-5 fw-bold mb-0">Magna</h3>
-                  <span class="fw-medium">Consectetur adipiscing</span>
-                </div>
-              </div>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam nobis voluptatum, eligendi laborum labore sunt harum perspiciatis minima quidem quisquam eaque amet animi vel impedit ullam itaque soluta ipsa accusamus?</p>
-              <span class="fs-4 back-btn"><i class="fa-solid fa-arrow-left"></i></span>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="card p-5 pt-4 pb-4 border-0">
-              <div class="row align-items-center mb-4">
-                <div class="col-4 p-0">
-                  <div class="person-img w-75">
-                    <img class="w-100 h-100" src="./assets/imgs/person2.png" alt="">
-                  </div>
-                </div>
-                <div class="col-8 p-0">
-                  <h3 class="fs-5 fw-bold mb-0">Aliqua</h3>
-                  <span class="fw-medium">Consectetur adipiscing</span>
-                </div>
-              </div>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam nobis voluptatum, eligendi laborum labore sunt harum perspiciatis minima quidem quisquam eaque amet animi vel impedit ullam itaque soluta ipsa accusamus?</p>
-              <span class="fs-4 back-btn"><i class="fa-solid fa-arrow-left"></i></span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="container slider-item text-light text-center text-md-start">
-      <div class="text-center mb-4">
-        <h2 class="text-uppercase fs-1 fw-bold mb-3">digitf</h2>
-        <span class="footer-line w-75 d-inline-block"></span>
-      </div>
-      <div class="row">
-        <div class="col-lg-3 col-md-5 mb-5">
-          <h3 class="mb-5">About Shop</h3>
-          <ul class="ps-0">
-            <li class="pt-2 pb-2"><i class="fa-solid fa-location-dot"></i><span class="ms-3">Address</span></li>
-            <li class="pt-2 pb-2"><i class="fa-solid fa-mobile-screen-button"></i><span class="ms-3">+01 1234567890</span></li>
-            <li class="pt-2 pb-2"><i class="fa-solid fa-envelope"></i><span class="ms-3">demo@gmail.com</span></li>
-          </ul>
-        </div>
-        <div class="col-md-2 d-none d-md-block d-lg-none"></div>
-        <div class="col-xl-2 col-lg-3 col-md-5 mb-5">
-          <h3 class="mb-5">Informations</h3>
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit sequi saepe exercitationem veritatis voluptatibus, magni laboriosam. Aliquam illo, tempora provident aliquid quam expedita porro ipsum hic, explicabo ea, itaque placeat.</p>
-        </div>
-        <div class="col-xl-1 d-none d-xl-block"></div>
-        <div class="col-lg-2 col-md-5 mb-5">
-          <h3 class="mb-4">Instagram</h3>
-          <div class="row">
-            <div class="col-6 mb-3 d-flex justify-content-center justify-content-md-start">
-              <div class="w-75">
-                <img class="w-100" src="./assets/imgs/img2.png" alt="">
-              </div>
-            </div>
-            <div class="col-6 mb-3 d-flex justify-content-center justify-content-md-start">
-              <div class="w-75">
-                <img class="w-100" src="./assets/imgs/img2.png" alt="">
-              </div>
-            </div>
-            <div class="col-6 mb-3 d-flex justify-content-center justify-content-md-start">
-              <div class="w-75">
-                <img class="w-100" src="./assets/imgs/img2.png" alt="">
-              </div>
-            </div>
-            <div class="col-6 mb-3 d-flex justify-content-center justify-content-md-start">
-              <div class="w-75">
-                <img class="w-100" src="./assets/imgs/img2.png" alt="">
-              </div>
-            </div>
-            <div class="col-6 mb-3 d-flex justify-content-center justify-content-md-start">
-              <div class="w-75">
-                <img class="w-100" src="./assets/imgs/img2.png" alt="">
-              </div>
-            </div>
-            <div class="col-6 mb-3 d-flex justify-content-center justify-content-md-start">
-              <div class="w-75">
-                <img class="w-100" src="./assets/imgs/img2.png" alt="">
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-xl-1 col-md-2 d-none d-md-block d-lg-none d-xl-block"></div>
-        <div class="col-xl-3 col-lg-4 col-md-5 mb-5">
-          <h3 class="mb-4">Newsletter</h3>
-          <form action="">
-            <input type="email" class="p-3 pt-1 pb-1 w-100 fs-5 mb-2" placeholder="Enter your email">
-            <button class="read-more-btn btn rounded-0 text-uppercase text-light ps-4 pe-4 mt-3" type="submit">subscribe</button>
-          </form>
-          <ul class="mt-4 p-0">
-            <li class="d-inline fs-3 me-3"><a href="#" class="text-light social-link"><i class="fa-brands fa-facebook-f"></i></a></li>
-            <li class="d-inline fs-3 ms-3 me-3"><a href="#" class="text-light social-link"><i class="fa-brands fa-twitter"></i></a></li>
-            <li class="d-inline fs-3 ms-3 me-3"><a href="#" class="text-light social-link"><i class="fa-brands fa-linkedin-in"></i></a></li>
-            <li class="d-inline fs-3 ms-3 me-3"><a href="#" class="text-light social-link"><i class="fa-brands fa-youtube"></i></a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="bg-white text-center pt-3 pb-3">
-      <p class="copyright m-0">&copy; 2019 All Rights Reserved. Free html Templates</p>
-    </div>
-  </footer>
-
-  <script src="./assets/plugins/bootstrap-5.3.2-dist/js/bootstrap.bundle.js"></script>
-  <script src="./assets/plugins/fontawesome-free-6.4.2-web/js/all.min.js"></script>
-  <script src="./assets/js/digitf.js"></script>
-</body>
+    <script src="./assets/plugins/bootstrap-5.3.2-dist/js/bootstrap.bundle.js"></script>
+    <script src="./assets/plugins/fontawesome-free-6.4.2-web/js/all.min.js"></script>
+    <script src="./assets/js/digitf.js"></script>
+  </body>
 </html>
