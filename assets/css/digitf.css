@@ -12,10 +12,6 @@
   box-sizing: border-box;
 }
 
-body {
-  overflow-x: hidden;
-}
-
 input:focus,
 textarea:focus {
   outline: none;
@@ -101,14 +97,15 @@ input {
 }
 
 .navbar-toggler-icon {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
+  height: auto;
+  display: block;
   background: none;
 }
 
 .navbar-toggler-icon .line {
+  display: block;
   height: 3px;
+  margin: 5px 0;
   background-color: #fff;
   transition: 0.3s;
 }
@@ -250,7 +247,7 @@ h1 {
 
 .play-btn {
   position: absolute;
-  top: 50%;
+  top: 360px;
   left: 140px;
   width: 100px;
   height: 100px;
@@ -262,14 +259,14 @@ h1 {
 
 .chair {
   position: absolute;
-  top: 20%;
-  left: 40%;
+  top: 120px;
+  right: 25%;
 }
 
 .slide-num {
   position: absolute;
-  top: 30%;
-  right: 20px;
+  top: 235px;
+  right: 15%;
 }
 
 .slide-num::after {
@@ -283,17 +280,21 @@ h1 {
 }
 
 @media (max-width: 991px) {
+  .chair {
+    right: 20px;
+  }
+
   .slide-num {
-    top: 52%;
-    right: 30%;
+    top: 370px;
+    right: 115px;
   }
 
   .play-btn {
-    top: 45%;
+    top: 370px;
   }
 }
 
-@media (min-width: 767px) and (max-width: 992px) {
+@media (min-width: 767px) and (max-width: 991px) {
   header .slider-item {
     padding: 150px 0;
   }
@@ -301,6 +302,11 @@ h1 {
 /* slider */
 
 /* About us */
+.about-us,
+.latest-collection {
+  overflow-x: hidden;
+}
+
 .h2 {
   display: inline;
   font-size: 45px;
@@ -554,6 +560,13 @@ input[type="number"] {
 /* Contact Us */
 
 /* Testimonial */
+@media (max-width: 575px) {
+  .card .person-img {
+    width: 100px !important;
+    margin-bottom: 20px;
+  }
+}
+
 .card span {
   color: var(--main-color);
 }
